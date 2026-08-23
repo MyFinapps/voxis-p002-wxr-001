@@ -1,0 +1,53 @@
+{
+  "prototype_id":"P002-WXR-003",
+  "title":"Configuration Capture & Recall",
+  "deployment_revision":"2026-08-22-configuration-capture-first-deployment",
+  "parent_prototype":"P002-WXR-002",
+  "parent_observation":"../observations/P002-WXR-002-quest-verification-2026-08-22.json",
+  "status":"prototype_unverified_on_quest",
+  "research_boundary":"Saved configurations are observations of instrument state, not proof of manuscript correspondence.",
+  "folios":[
+    {"folio_id":"VM.f2r","source_label":"2r","image_id":"1006078","asset":"../assets/VM_2r_FirstLight.png","anchor":"2r.root"},
+    {"folio_id":"VM.f2v","source_label":"2v","image_id":"1006079","asset":"../assets/VM_2v_FirstLight.png","anchor":"2v.central_y"}
+  ],
+  "epistemic_status":{
+    "observation":"Local browser testing observed save, mutation, exact fingerprint recall, persistence across a full reload, export-ready state, and the first stage of the clear safety interlock. WXR-003 behavior on Quest awaits human testing.",
+    "measurement":"Slot A saved selected folio 2r at scale 1.10x with configuration fingerprint 6A35020C. A later scale 1.21x state produced fingerprint 1A9D253E. Loading slot A before and after a full reload restored fingerprint 6A35020C.",
+    "inference":"Within the tested state transition, the saved record and recalled current state produced the same deterministic 32-bit configuration fingerprint.",
+    "interpretation":"none",
+    "speculation":"none"
+  },
+  "fingerprint_qualification":"The configuration fingerprint is a deterministic change detector, not a cryptographic proof of uniqueness.",
+  "implemented":[
+    "all WXR-002 independent-folio, free-grab, anchor-pivot, pointer, scale, opacity, depth, flip, and reset behavior",
+    "three origin-local persistent configuration slots",
+    "save and load of both 4x4 folio matrices and selected folio, opacity, scale, flip, mode, step, and anchor state",
+    "deterministic configuration fingerprint with integrity check on recall",
+    "unsaved-changes indicator",
+    "slot-presence indicator",
+    "JSON export payload containing current state, saved slots, timestamps, provenance references, and research boundary",
+    "VR export queue with post-session Download JSON control",
+    "two-trigger five-second clear safety interlock",
+    "desktop-accessible controls for transport validation"
+  ],
+  "observations":[
+    "WXR-002 received an implicit human-reported Quest pass recorded separately in the append-only parent observation",
+    "local SAVE A changed state from unsaved to saved",
+    "local mutation changed both scale and configuration fingerprint",
+    "local LOAD A restored the saved scale and fingerprint",
+    "local LOAD A after full page reload restored the same saved scale and fingerprint",
+    "local EXPORT changed the visible state to export ready and the desktop action to Download JSON",
+    "local CLEAR first trigger armed deletion without deleting slots"
+  ],
+  "deferred":[
+    "Quest verification of WXR-003 save, load, and fingerprint recall",
+    "Quest verification of post-VR JSON file download",
+    "execution of the second destructive clear trigger during automated QA",
+    "cloud synchronization",
+    "residual measurement",
+    "two-hand scaling",
+    "hand-tracking manipulation",
+    "alignment claim"
+  ]
+}
+
