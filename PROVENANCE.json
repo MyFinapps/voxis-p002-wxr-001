@@ -1,15 +1,16 @@
 {
   "prototype_id":"P002-WXR-001",
   "title":"Dual Folio First Contact",
-  "deployment_revision":"2026-08-22-pointer-visibility-hotfix",
-  "status":"prototype_unverified_on_quest",
+  "deployment_revision":"2026-08-22-pointer-shape-and-horizontal-flip",
+  "status":"prototype_partially_verified_on_quest",
   "research_boundary":"Geometric fit is a research aid, not proof of manuscript correspondence.",
   "folios":[
     {"folio_id":"VM.f2r","source_label":"2r","image_id":"1006078","asset":"assets/VM_2r_FirstLight.png","anchor":"2r.root"},
     {"folio_id":"VM.f2v","source_label":"2v","image_id":"1006079","asset":"assets/VM_2v_FirstLight.png","anchor":"2v.central_y"}
   ],
-  "epistemic_status":{"observation":"Quest interaction pending","measurement":"none","inference":"none","interpretation":"none","speculation":"none"},
-  "implemented":["independent folio objects","controller-trigger grab and controller-pose rotation","crossed-plane tracked-controller pointer beams","scale controls","opacity cycle","depth offset","anchor markers","hard reset"],
-  "observations":["Quest controllers and selection input observed working by human tester","original deployment pointer beam not visible because the prepared beam texture was not submitted by the frame renderer"],
+  "epistemic_status":{"observation":"Quest controllers, selection input, and pointer visibility observed by human tester; revised pointer shape and horizontal flip await Quest confirmation","measurement":"none","inference":"none","interpretation":"none","speculation":"none"},
+  "implemented":["independent folio objects","controller-trigger grab and controller-pose rotation","co-linear crossed-plane tracked-controller pointer rays","scale controls","opacity cycle","depth offset","per-folio reversible horizontal flip","anchor markers","hard reset"],
+  "observations":["Quest controllers and selection input observed working by human tester","original deployment pointer beam not visible because the prepared beam texture was not submitted by the frame renderer","first visible pointer revision appeared T-shaped because one visibility plane crossed the ray axis"],
   "deferred":["snapshot persistence","residual measurement","two-hand scaling","pivot-locked rotation","hand-tracking manipulation","alignment claim"]
 }
+
