@@ -1,0 +1,47 @@
+{
+  "prototype_id":"P002-WXR-002",
+  "title":"Anchor-Pivot Rotation",
+  "deployment_revision":"2026-08-22-anchor-pivot-first-deployment",
+  "parent_prototype":"P002-WXR-001",
+  "status":"prototype_unverified_on_quest",
+  "research_boundary":"Geometric manipulation is a research aid, not proof of manuscript correspondence.",
+  "folios":[
+    {"folio_id":"VM.f2r","source_label":"2r","image_id":"1006078","asset":"../assets/VM_2r_FirstLight.png","anchor":"2r.root"},
+    {"folio_id":"VM.f2v","source_label":"2v","image_id":"1006079","asset":"../assets/VM_2v_FirstLight.png","anchor":"2v.central_y"}
+  ],
+  "epistemic_status":{
+    "observation":"Human Quest testing verified WXR-001 controller input, clean pointer rays, and per-folio horizontal flip. WXR-002 pivot interaction awaits Quest testing.",
+    "measurement":"Deterministic transform test measured simulated pivot-anchor world-position drift at approximately 4.6e-16 scene units.",
+    "inference":"The implemented transform preserves the declared pivot numerically under the tested simulated controller rotation.",
+    "interpretation":"none",
+    "speculation":"none"
+  },
+  "implemented":[
+    "independent folio objects",
+    "per-folio free-grab mode",
+    "per-folio anchor-pivot rotation mode",
+    "controller-trigger selection and manipulation",
+    "co-linear crossed-plane tracked-controller pointer rays",
+    "live selected-folio mode, scale, opacity, and flip state",
+    "scale controls",
+    "opacity cycle",
+    "depth offset",
+    "per-folio reversible horizontal flip",
+    "anchor markers",
+    "hard reset to free-grab mode"
+  ],
+  "observations":[
+    "WXR-001 controllers and selection input observed working by human tester",
+    "WXR-001 corrected pointer rays observed working by human tester",
+    "WXR-001 per-folio horizontal flip observed working by human tester"
+  ],
+  "deferred":[
+    "Quest verification of WXR-002 anchor-pivot interaction",
+    "snapshot persistence",
+    "residual measurement",
+    "two-hand scaling",
+    "hand-tracking manipulation",
+    "alignment claim"
+  ]
+}
+
